@@ -1,0 +1,60 @@
+.cabecalho__menu-humburger {
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/images/Menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+.cabecalho {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container__imagem {
+  padding: 1em;
+}
+
+.lista-menu {
+  width: 60vw;
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.container__botao:checked ~ .lista-menu {
+  display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+  padding: 1em;
+  background-color: var(--white);
+}
+
+.lista-menu__titulo {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.lista-menu__link {
+  background: var(--gradient-blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.container__botao {
+  display: none;
+}
