@@ -1,10 +1,11 @@
-.cabecalho__menu-humburger {
+.header__menu-hamburger {
   width: 24px;
   height: 24px;
   background-image: url("../assets/images/Menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
+  margin-left: 24px;
 }
 
 .cabecalho {
@@ -20,8 +21,9 @@
   align-items: center;
 }
 
-.container__imagem {
-  padding: 1em;
+.container__image {
+  padding: 0.5em;
+  
 }
 
 .lista-menu {
@@ -57,4 +59,60 @@
 
 .container__botao {
   display: none;
+}
+
+.container__title {
+  display: none;
+}
+
+.options {
+  display: none;
+}
+
+@media screen and (min-width: 1024px){
+
+  .container__title, .container__title-bold {
+    font-family: var(--secondary-font);
+    font-size: 30px;
+  }
+
+  .container__title {
+    font-weight: 400;
+    display: block;
+  }
+
+  .container__title-bold {
+    font-weight: 700;
+  }
+  
+  .options {
+    display: flex;
+  }
+
+  .options__item {
+    padding: 0 1em;
+    text-transform: uppercase;
+  }
+
+  .options__link{
+    text-decoration: none;
+    color: var(--black);
+  }
+  
+  .container__image-transparent {
+    display: none;
+  }
+
+  .header__menu-hamburger {
+    display: none;
+  }
+
+  .options__button:checked ~ .lista-menu {
+    display: block;
+    width: auto;
+  }
+  
+  .options__button {
+    display: none;
+  }
 }
