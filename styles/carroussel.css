@@ -51,7 +51,7 @@
 }
 
 .card__description {
-  margin-bottom: 0.5.em;
+  margin-bottom: 0.5em;
 }
 
 .description__title {
@@ -125,6 +125,7 @@
   .description {
     margin-right: 2em;
   }
+
   .description__title {
     font-size: 32px;
     line-height: 1.5;
