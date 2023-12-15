@@ -37,4 +37,28 @@
   .topics__link {
      font-size: 24px;
   }
+
+  .topics__link:hover {
+    color: var(--orange);
+    background-color: var(--white);
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .topics {
+    padding: 3em 30vw;
+  }
+
+  .topics__link {
+     font-size: 24px;
+  }
+
+  .topics__item {
+    padding: 0.25em;
+  }
+
+  .topics__link {
+    color: var(--orange);
+    background-color: var(--white);
+  }
 }

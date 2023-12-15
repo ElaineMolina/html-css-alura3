@@ -5,7 +5,15 @@
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
-  margin-left: 24px;
+}
+
+.container__botao:checked~.container__label > .header__menu-hamburger {
+  background-image: url("../assets/images/Frame\ 20.svg");
+}
+
+.container__botao:checked~.container__label {
+  background: var(--gradient-blue);
+  padding: 7px;
 }
 
 .cabecalho {
@@ -22,15 +30,14 @@
 }
 
 .container__image {
-  padding: 0.5em;
-  
+  padding: 1em;
 }
 
 .lista-menu {
-  width: 60vw;
   display: none;
   position: absolute;
   top: 100%;
+  width: 60vw;
 }
 
 .container__botao:checked ~ .lista-menu {
@@ -54,7 +61,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  text-decoration: none;
+  /* text-decoration: none; */
+}
+
+.container__text {
+  display: none;
 }
 
 .container__botao {
@@ -69,7 +80,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width:1024px){
 
   .container__title, .container__title-bold {
     font-family: var(--secondary-font);
@@ -93,7 +104,7 @@
     padding: 0 1em;
     text-transform: uppercase;
   }
-
+  
   .options__link{
     text-decoration: none;
     color: var(--black);
@@ -107,12 +118,56 @@
     display: none;
   }
 
-  .options__button:checked ~ .lista-menu {
+  .options__button:checked~.lista-menu {
     display: block;
     width: auto;
   }
   
   .options__button {
     display: none;
+  }
+  
+    .options__button:checked~.options__label>.options__item {
+      background: var(--gradient-blue);
+      color: var(--white);
+  }
+  
+  .options__item {
+    padding: 2em 1em;
+  }
+  
+  .lista-menu__item:hover {
+    background: var(--gradient-blue);
+  }
+
+  .lista-menu__item:hover>.lista-menu__link {
+    -webkit-text-fill-color: var(--white);
+    text-decoration: none;
+}
+
+.lista-menu__link {
+  text-decoration: none;
+}
+
+}
+
+@media screen and (min-width:1728px){
+  .container__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  .cabecalho {
+    padding: 0 2em;
+}
+
+  .options {
+    margin-right: auto;
+  }
+
+  .container__text {
+    display: block;
   }
 }
