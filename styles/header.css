@@ -61,7 +61,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 
 .container__text {
